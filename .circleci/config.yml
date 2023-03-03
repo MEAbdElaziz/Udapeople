@@ -293,7 +293,7 @@ cleanup:
       # Checkout code from git
       - run:
           name: Get old stack workflow id
-          command: |
+          command: | 
             # your code here
             export OldWorkflowID="the id here"
             export STACKS=[] #put the list of stacks here
