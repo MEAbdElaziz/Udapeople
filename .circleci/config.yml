@@ -139,8 +139,6 @@ jobs:
              npm install
              npm audit fix --audit-level=critical --force
              npm audit --audit-level=critical
-
-
   deploy-infrastructure:
     docker:
       # Docker image here that supports AWS CLI
@@ -174,7 +172,6 @@ jobs:
           paths:
             - project/.circleci/ansible/inventory.txt
       # Here's where you will add some code to rollback on failure      
-
   configure-infrastructure:
     docker:
       # Docker image here that supports Ansible
@@ -193,7 +190,6 @@ jobs:
             # Your code here
             exit 1
       # Here's where you will add some code to rollback on failure      
-
   run-migrations:
     docker:
       # Docker image here that supports NodeJS
@@ -210,7 +206,6 @@ jobs:
             # Your code here
             exit 1
      # Here's where you will add some code to rollback on failure      
-
   deploy-frontend:
     docker:
       # Docker image here that supports AWS CLI
@@ -230,8 +225,7 @@ jobs:
           name: Deploy frontend objects
           command: |
             # your code here
-      # Here's where you will add some code to rollback on failure      
-                    
+      # Here's where you will add some code to rollback on failure                       
   deploy-backend:
     docker:
       # Docker image here that supports Ansible
@@ -248,7 +242,6 @@ jobs:
           command: |
             # your code here
       # Here's where you will add some code to rollback on failure  
-
   smoke-test:
     docker:
       # Lightweight Docker image 
@@ -271,7 +264,6 @@ jobs:
           command: |
             # your code here
       # Here's where you will add some code to rollback on failure  
-
   cloudfront-update:
     docker:
       # Docker image here that supports AWS CLI
@@ -285,9 +277,8 @@ jobs:
           name: Update cloudfront distribution
           command: |
             # your code here
-      # Here's where you will add some code to rollback on failure  
-
-cleanup:
+      # Here's where you will add some code to rollback on failure 
+  cleanup:
     docker:
       # Docker image here
     steps:
