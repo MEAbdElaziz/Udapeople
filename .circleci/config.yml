@@ -106,8 +106,8 @@ jobs:
              npm install
              npm run test
   test-frontend:
-    requires:
-           - build-frontend          
+  requires:
+      - build-frontend          
 #   scan-frontend:
 #     docker:
 #       # Docker image here
